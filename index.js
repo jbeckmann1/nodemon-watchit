@@ -6,6 +6,7 @@ const chokidar = require('chokidar');
 //CLI Tool
 const program = require('caporal');
 const fs = require('fs');
+const { spawn } = require('child_process');
 
 program.version('0.0.1').argument('[filename]', 'Name of a file to execute').action(async ({ filename }) => {
 	const name = filename || 'index.js';
@@ -16,7 +17,7 @@ program.version('0.0.1').argument('[filename]', 'Name of a file to execute').act
 		throw new Error(`could not find the file ${name}`);
 	}
 	const start = debounce(() => {
-		console.log('Starting Users Program');
+		spawn('node', [ name ], { stdio: 'inherit' });
 	}, 500);
 
 	chokidar.watch('.').on('add', start).on('change', start).on('unlink', start);
