@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/jbeckmann1/nodemon-watchit/issues"
   },
-  "homepage": "https://github.com/jbeckmann1/nodemon-watchit#readme"
+  "homepage": "https://github.com/jbeckmann1/nodemon-watchit#readme",
+  "dependencies": {
+    "caporal": "^1.4.0",
+    "chokidar": "^3.4.3"
+  }
 }
