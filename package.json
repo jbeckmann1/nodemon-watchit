@@ -1,7 +1,6 @@
 {
   "name": "nodemon-watchit",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,7 +21,10 @@
   "homepage": "https://github.com/jbeckmann1/nodemon-watchit#readme",
   "dependencies": {
     "caporal": "^1.4.0",
+    "chalk": "^4.1.0",
     "chokidar": "^3.4.3",
     "lodash.debounce": "^4.0.8"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
